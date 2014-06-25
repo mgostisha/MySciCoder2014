@@ -1,0 +1,10 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE "student" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , "first_name" TEXT, "last_name" TEXT, "city_id" INTEGER, "status_id" INTEGER);
+CREATE TABLE "city" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , "label" TEXT);
+CREATE TABLE "status" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , "label" TEXT);
+CREATE TABLE "student_to_supervisor" ("student_id" INTEGER NOT NULL , "supervisor_id" INTEGER NOT NULL , PRIMARY KEY ("student_id", "supervisor_id"));
+CREATE TABLE "student_to_club" ("student_id" INTEGER NOT NULL , "club_id" INTEGER NOT NULL , PRIMARY KEY ("student_id", "club_id"));
+CREATE TABLE "club" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , "label" TEXT);
+CREATE TABLE "supervisor" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , "first_name" TEXT, "last_name" TEXT, "room_number" TEXT);
+COMMIT;
