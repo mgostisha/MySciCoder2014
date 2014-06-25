@@ -50,7 +50,7 @@ coverage.xml
 *.pot
 
 # Data and Database files
-*.sql
+*.sqlite
 student_data.txt
 
 # Sphinx documentation
