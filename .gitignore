@@ -52,6 +52,7 @@ coverage.xml
 # Data and Database files
 *.sqlite
 student_data.txt
+*.fits
 
 # Sphinx documentation
 docs/_build/
