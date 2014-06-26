@@ -1,5 +1,4 @@
 import sys
-import time
 import sqlalchemy
 from SQLiteConnection import engine, Session
 from ModelClasses import *
